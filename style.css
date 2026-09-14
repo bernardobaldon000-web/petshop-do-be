@@ -1,0 +1,131 @@
+/* ==========================================================================
+   Petshop do Bê - Fase 2
+   Estilos personalizados aplicados por cima do Bootstrap 5.
+   ========================================================================== */
+
+/* --- Paleta de cores da marca, definida em variáveis CSS para reuso --- */
+:root {
+    --petshop-primary: #2f6f4e;   /* verde principal (identidade da marca) */
+    --petshop-primary-dark: #234f38;
+    --petshop-accent: #f2a541;    /* laranja de destaque (botões, alertas) */
+    --petshop-bg-light: #f7f4ee;  /* fundo levemente amadeirado/aconchegante */
+}
+
+body {
+    background-color: var(--petshop-bg-light);
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* --- Link de acessibilidade "Pular para o conteúdo" ---
+   Fica escondido visualmente até receber foco via teclado (Tab),
+   permitindo que leitores de tela / usuários de teclado pulem o menu. */
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: auto;
+    background: var(--petshop-primary-dark);
+    color: #fff;
+    padding: 0.75rem 1.25rem;
+    z-index: 2000;
+    border-radius: 0 0 0.5rem 0;
+}
+.skip-link:focus {
+    left: 0;
+    top: 0;
+}
+
+/* --- Cabeçalho / navbar --- */
+.navbar-petshop {
+    background-color: var(--petshop-primary);
+}
+.navbar-petshop .navbar-brand,
+.navbar-petshop .nav-link {
+    color: #ffffff;
+}
+.navbar-petshop .nav-link.active {
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+.navbar-petshop .nav-link:hover,
+.navbar-petshop .nav-link:focus {
+    color: var(--petshop-accent);
+}
+
+/* --- Faixa de status (aberto/fechado + saudação), atualizada via JS --- */
+#status-loja {
+    border-left: 6px solid var(--petshop-primary);
+    font-weight: 500;
+}
+#status-loja.status-fechado {
+    border-left-color: #b02a37;
+}
+
+/* --- Carrossel da página inicial --- */
+.carousel-item img {
+    height: 380px;
+    object-fit: cover;
+    filter: brightness(0.65);
+}
+.carousel-caption {
+    bottom: 45%;
+}
+.carousel-caption h2 {
+    font-weight: 700;
+}
+
+/* --- Cards de produtos e serviços --- */
+.card-produto img,
+.card-servico img {
+    height: 200px;
+    object-fit: cover;
+}
+.card-produto .card-title,
+.card-servico .card-title {
+    color: var(--petshop-primary-dark);
+}
+.preco {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--petshop-primary-dark);
+}
+
+/* Botões de filtro de categoria em produtos.html */
+.btn-filtro.active {
+    background-color: var(--petshop-primary);
+    border-color: var(--petshop-primary);
+    color: #fff;
+}
+
+/* --- Formulário de agendamento --- */
+.form-section-title {
+    border-bottom: 2px solid var(--petshop-primary);
+    padding-bottom: 0.35rem;
+    margin-top: 2rem;
+    color: var(--petshop-primary-dark);
+}
+#resumo-agendamento {
+    display: none; /* exibido dinamicamente via JS após o envio */
+    border: 2px dashed var(--petshop-primary);
+    background-color: #eef6f0;
+}
+
+/* Garante um contorno de foco bem visível em todos os elementos
+   interativos, para quem navega por teclado (requisito de acessibilidade) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--petshop-accent);
+    outline-offset: 2px;
+}
+
+/* --- Rodapé --- */
+footer {
+    background-color: var(--petshop-primary-dark);
+    color: #f1f1f1;
+}
+footer a {
+    color: #ffffff;
+}

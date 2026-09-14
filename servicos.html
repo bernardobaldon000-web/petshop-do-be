@@ -4,56 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Petshop do Bê - Serviços</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 
+    <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
+
     <header>
-        <h1>Petshop do Bê</h1>
-        <p>Tudo para o seu melhor amigo, com carinho e qualidade.</p>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="produtos.html">Produtos</a></li>
-                <li><a href="servicos.html">Serviços</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-md navbar-petshop" aria-label="Menu principal">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">🐾 Petshop do Bê</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#menuPrincipal" aria-controls="menuPrincipal"
+                        aria-expanded="false" aria-label="Abrir/fechar menu de navegação">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="servicos.html">Serviços</a></li>
+                        <li class="nav-item"><a class="nav-link" href="agendamento.html">Cadastro e Agendamento</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <main>
-        <h2>Nossos Serviços</h2>
+    <main id="conteudo-principal" class="container py-4">
+        <h1>Nossos Serviços</h1>
         <p>Oferecemos serviços de banho e tosa, com ou sem tele-busca, para o conforto do seu pet e a sua comodidade.</p>
 
-        <section>
-            <article>
-                <h3>Banho e Tosa - Sem Tele-busca</h3>
-                <p>Serviço completo de banho e tosa realizado em nossa loja física. Você traz o pet e retira no mesmo dia.</p>
-                <p>Tele-busca: Não</p>
-                <p>Valor: R$ 60,00</p>
-            </article>
+        <div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
+            <div class="col">
+                <article class="card card-servico h-100">
+                    <div class="card-body">
+                        <h2 class="h4 card-title">Banho e Tosa - Sem Tele-busca</h2>
+                        <p class="card-text">Serviço completo de banho e tosa realizado em nossa loja física. Você traz o pet e retira no mesmo dia.</p>
+                        <p class="card-text">Tele-busca: <strong>Não</strong></p>
+                        <p class="preco">Valor: R$ 60,00</p>
+                    </div>
+                </article>
+            </div>
+            <div class="col">
+                <article class="card card-servico h-100">
+                    <div class="card-body">
+                        <h2 class="h4 card-title">Banho e Tosa - Com Tele-busca</h2>
+                        <p class="card-text">Serviço completo de banho e tosa com busca e entrega do pet no endereço cadastrado, sem você precisar sair de casa.</p>
+                        <p class="card-text">Tele-busca: <strong>Sim</strong></p>
+                        <p class="preco">Valor: R$ 85,00</p>
+                    </div>
+                </article>
+            </div>
+        </div>
 
-            <article>
-                <h3>Banho e Tosa - Com Tele-busca</h3>
-                <p>Serviço completo de banho e tosa com busca e entrega do pet no endereço cadastrado, sem você precisar sair de casa.</p>
-                <p>Tele-busca: Sim</p>
-                <p>Valor: R$ 85,00</p>
-            </article>
-        </section>
+        <div class="text-center">
+            <a href="agendamento.html" class="btn btn-lg" style="background-color: var(--petshop-accent); color: #212529;">
+                Fazer cadastro e agendar agora
+            </a>
+        </div>
     </main>
 
-    <footer>
-        <hr>
-        <p>Petshop do Bê - CNPJ: 00.000.000/0001-00</p>
-        <p>Endereço: Rua dos Animais, 123 - Charqueadas/RS</p>
-        <p>Telefone: (51) 0000-0000 | E-mail: contato@petshopdobe.com.br</p>
-        <nav>
-            <a href="index.html">Início</a> |
-            <a href="produtos.html">Produtos</a> |
-            <a href="servicos.html">Serviços</a> |
-            <a href="contato.html">Contato</a>
-        </nav>
-        <p>&copy; 2026 Petshop do Bê. Todos os direitos reservados.</p>
+    <footer class="py-4 mt-4">
+        <div class="container">
+            <p class="mb-1">Petshop do Bê - CNPJ: 00.000.000/0001-00</p>
+            <p class="mb-1">Endereço: Rua dos Animais, 123 - Charqueadas/RS</p>
+            <p class="mb-2">Telefone: (51) 0000-0000 | E-mail: contato@petshopdobe.com.br</p>
+            <nav aria-label="Links do rodapé">
+                <a href="index.html">Início</a> |
+                <a href="produtos.html">Produtos</a> |
+                <a href="servicos.html">Serviços</a> |
+                <a href="agendamento.html">Cadastro e Agendamento</a> |
+                <a href="contato.html">Contato</a>
+            </nav>
+            <p class="mt-2 mb-0">&copy; <span id="ano-atual">2026</span> Petshop do Bê. Todos os direitos reservados.</p>
+        </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
